@@ -1,47 +1,123 @@
-#about {
-  text-align: center;
+* {
+	padding: 0;
+	margin: 0;
 }
-#about ul{
+html {
+	color: 3f3f3f;
+}
+header {
+  background-color: #fdffe0;
+	padding: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+#logo {
+  font-size: xx-large;
+}
+.brand {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  margin-left: 10px;
+}
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+nav ul li {
+	list-style-type: none;
+	width: min-content;
+	margin: 10px;
+}
+#hero {
+	font-size: xx-large;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-image: url("./assets/chess.gif");
+	background-size: cover;
+	background-position: center;
+	height: 50vh;
+}
+section {
+	padding: 40px 0;
+}
+#about {
+	text-align: center;
+}
+#about ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #about li {
-  width: 195px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+	width: 195px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
 }
 main {
-  width: 70vw;
-  min-width: fit-content;
-  margin: 0 auto;
+	min-width: fit-content;
+	margin: 0 auto;
 }
+
+.product-display {
+	padding: 20px 12vw;
+  box-shadow: 0px 10px 20px inset rgba(0, 0, 0, .2);
+}
+.product-display:nth-of-type(2n-1) {
+	color: white;
+	background-color: #655d63;
+}
+.product-display:nth-of-type(2n) {
+	color: #3a3b31;
+	background-color: #fdffe0;
+  
+}
+
 .product-display ul {
-  margin: 0 auto;
-  padding: 0;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	list-style-type: none;
 }
 
 .product-display li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px 1.5vw;
-  border: 1px solid black;
-  min-width: 100px;
-  overflow-wrap: break-word;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px 1.5vw;
+	border: 1px solid black;
+	min-width: 100px;
+	overflow-wrap: break-word;
 }
 
 img {
-  width: 150px;
-  height: 150px;
+	width: 150px;
+	height: 150px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+	background-color: #3c3e46;
+}
+.inverted {
+	filter: invert(1);
 }
