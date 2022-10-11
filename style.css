@@ -1,29 +1,57 @@
+:root {
+	--raisin-black: #231717;
+	--dark-lava: #48392a;
+	--cream: #fcffd2;
+	--ivory: #ffffee;
+	--russian-green: #5e8c61;
+	--capri: #30C5FF;
+	--leather: #2d2116;
+}
 * {
 	padding: 0;
 	margin: 0;
 }
 html {
-	color: 3f3f3f;
+	color: var(--raisin-black);
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Playfair Display', serif;
+}
+p {
+	font-family: 'Inter Tight', sans-serif;
+	margin-top: 5px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover, a:hover h3{
+	color: var(--capri);
+}
+
+h2,h3,h4,h5,h6 {
+	color: var(--russian-green);
 }
 header {
-  background-color: #fdffe0;
+	background-color: #fdffe0;
 	padding: 5px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 #logo {
-  font-size: xx-large;
+	font-size: xx-large;
+	margin-bottom: -11px;
 }
 .brand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: x-large;
-  margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Abril Fatface", serif;
+	font-size: x-large;
+	margin-left: 10px;
 }
 nav ul {
 	display: flex;
@@ -31,28 +59,44 @@ nav ul {
 	justify-content: center;
 	align-items: center;
 }
-nav ul li {
+nav li {
 	list-style-type: none;
 	width: min-content;
 	margin: 10px;
 }
+
+nav li:hover {
+	font-weight: bold;
+}
+
 #hero {
 	font-size: xx-large;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: white;
+	color: var(--ivory);
 	background-image: url("./assets/chess.gif");
 	background-size: cover;
 	background-position: center;
 	height: 50vh;
+	box-shadow: inset 0px -30px 50px rgba(0, 0, 0, 1);
 }
 section {
 	padding: 40px 0;
 }
 #about {
 	text-align: center;
+	background-color: var(--ivory);
+	color: var(--raisin-black);
+}
+#about h1 {
+	font-size: 3rem;
+	margin: 10px;
+	letter-spacing: 2px;
+}
+#about h2 {
+	letter-spacing: -1px;
 }
 #about ul {
 	display: flex;
@@ -76,18 +120,17 @@ main {
 .product-display {
 	text-align: center;
 	padding: 20px 20px;
-  box-shadow: 0px 10px 20px inset rgba(0, 0, 0, .1);
+	box-shadow: 0px 10px 20px inset rgba(0, 0, 0, 0.3);
 }
+
 .product-display:nth-of-type(2n-1) {
-	background-color: #b7b7b6;
+	color: var(--ivory);
+	background-color: var(--dark-lava);
 }
-.product-display:nth-of-type(2n-1) li {
-	color: white;
-	background-color: #413c35;
-}
+
 .product-display:nth-of-type(2n) {
-	color: #3a3b31;
-	background-color: #fdffe0;  
+	color: var(--leather);
+	background-color: var(--cream);
 }
 
 .product-display ul {
@@ -96,22 +139,40 @@ main {
 	justify-content: center;
 	align-items: stretch;
 	flex-wrap: wrap;
+
 	list-style-type: none;
+	margin-top: 15px;
 }
 
-.product-display li {
+.item-card {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
-	width: min-content;
-	margin: 10px 1.5vw;
-	border: 1px solid transparent;
-	border-radius: 2px;
-	padding: 15px;
 
-	box-shadow: 0px 2px 15px rgba(0, 0, 0, .4);
+	width: 300px;
+	margin: 10px 1vw;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: var(--ivory);
+	color: var(--raisin-black);
 }
+.item-content {
+	padding: 0px 40px 20px 40px;
+	text-align: left;
+	height: max-content;
+}
+.img-wrapper {
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+}
+.img-wrapper:hover img {
+	transform: scale(1.1);
+}
+
 .add-to-cart {
 	display: flex;
 	flex-direction: column;
@@ -120,15 +181,25 @@ main {
 	margin-top: auto;
 	padding-top: 20px;
 }
+
 button {
-	padding: 5px;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	padding: 12px;
+	margin: 10px;
+	background-color:var(--russian-green);
+	color: var(--ivory);
+	font-weight: bold;
+	font-family: 'Inter Tight', sans-serif;
+}
+
+.item-card, button {
+	box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 img {
-	width: 200px;
-	height: 200px;
-	margin: 10px;
-	transition: all .3s ease-in-out;
+	transition: all 1.3s ease-in;
+	width: 100%;
 }
 
 footer {
@@ -136,7 +207,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	height: 60px;
-	background-color: #2d2116;
+	background-color: var(--leather);
 }
 .inverted {
 	filter: invert(1);
