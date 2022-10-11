@@ -4,6 +4,7 @@
 	--cream: #fcffd2;
 	--ivory: #ffffee;
 	--russian-green: #5e8c61;
+	--dark-green: rgb(42, 62, 44);
 	--capri: #30C5FF;
 	--leather: #2d2116;
 }
@@ -196,6 +197,13 @@ button {
 	font-family: 'Inter Tight', sans-serif;
 }
 
+button:active {
+	background: var(--dark-green);
+	box-shadow: none;
+}
+button:hover {
+	background-color: var(--dark-green);
+}
 .item-card, button {
 	box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
 }
