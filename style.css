@@ -82,6 +82,9 @@ nav li:hover {
 	height: 50vh;
 	box-shadow: inset 0px -30px 50px rgba(0, 0, 0, 1);
 }
+#hero * {
+	font-family: "Abril Fatface", serif;
+}
 section {
 	padding: 40px 0;
 }
@@ -91,12 +94,12 @@ section {
 	color: var(--raisin-black);
 }
 #about h1 {
-	font-size: 3rem;
+	font-size: 4rem;
+	font-family: "Abril Fatface", serif;
 	margin: 10px;
-	letter-spacing: 2px;
 }
 #about h2 {
-	letter-spacing: -1px;
+	letter-spacing: 1px;
 }
 #about ul {
 	display: flex;
